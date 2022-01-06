@@ -5,8 +5,12 @@ services:
   backend:
     build: '.'
     volumes:
-      - "feedback:/app/feedback"
-      - "/Users/prashant/Documents/python_files/assignment-problem/django-app:/app"
+      - type: bind
+        source: .
+        target: /app
+      - type: volume
+        source: feedback
+        target: /app/feedback
     ports:
       - '8000:8000'
 
