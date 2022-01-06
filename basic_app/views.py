@@ -19,7 +19,7 @@ def print_both(request):
         customers = db["customers"]
         for x in customers.find():
             print(x)
-    return render(request, 'basic_app/index.html', context={'welcome_message': 'Welcome to the index page Guys!!'})
+    return render(request, 'basic_app/index.html', context={'welcome_message': 'Welcome to the index page!!'})
 
 def show_file_data(request):
     file_name = request.path.split('/')[-1]
