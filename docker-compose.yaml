@@ -1,0 +1,14 @@
+version: "3"
+services:
+  mongodb:
+    image: 'mongo'
+  backend:
+    build: '.'
+    volumes:
+      - "feedback:/app/feedback"
+      - "/Users/prashant/Documents/python_files/assignment-problem/django-app:/app"
+    ports:
+      - '8000:8000'
+
+volumes:
+  feedback:
